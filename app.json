@@ -1,22 +1,29 @@
 {
   "expo": {
-    "name": "ezops-expo",
-    "slug": "ezops-expo",
+    "name": "ezops",
+    "slug": "ezops",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "ezopsexpo",
+    "icon": "./assets/images/splash.png",
+    "scheme": "ezops",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.ezops.app",
+      "buildNumber": "2",
+      "supportsTablet": true,
+      "backgroundColor": "#000000",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.ezops.ezops"
     },
     "web": {
       "bundler": "metro",
@@ -28,15 +35,36 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#000000",
+          "statusBarStyle": "dark",
+          "image": "./assets/images/splash.png"
         }
-      ]
+      ],
+      "expo-font",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#000000",
+      "color": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/6436ec24-45c9-4fd3-840f-d5db56f3a55d"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6436ec24-45c9-4fd3-840f-d5db56f3a55d"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
