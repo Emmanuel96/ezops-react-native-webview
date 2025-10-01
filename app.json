@@ -14,7 +14,14 @@
       "supportsTablet": true,
       "backgroundColor": "#000000",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoadsInWebContent": true,
+          "NSExceptionDomains": {
+            "localhost": { "NSExceptionAllowsInsecureHTTPLoads": true },
+            "127.0.0.1": { "NSExceptionAllowsInsecureHTTPLoads": true }
+          }
+        }
       }
     },
     "android": {
